@@ -4,27 +4,18 @@
     <meta charset="UTF-8">
     <title>Video Player</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
-    <style>
-        .plyr__control--overlaid, .plyr__control, .plyr__controls__item.plyr__control--overlaid:hover, .plyr__controls__item.plyr__control:hover {
-            color: black !important;
-        }
-        .plyr__control--overlaid, .plyr__control, .plyr__controls__item.plyr__control--overlaid:hover, .plyr__controls__item.plyr__control:hover {
-            border-color: black !important;
-        }
-        .plyr__control.plyr__tab-focus, .plyr__control:hover, .plyr__control.plyr__tab-focus:hover {
-            background: black !important;
-        }
-    </style>
 </head>
 <body>
     <video id="player" playsinline controls>
-        <source src="https://www.dropbox.com/scl/fi/esklzwtsq2xaxrt0l43uy/reverse.mp4?rlkey=bbc0xeue9hwdirwn7use6m9k6&raw=1" type="video/mp4" />
+        <source src="https://streamable.com/bnvixr" type="video/mp4" />
     </video>
 
     <script src="https://cdn.plyr.io/3.6.9/plyr.polyfilled.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const player = new Plyr('#player');
+            const player = new Plyr('#player', {
+                controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'], // Lista de controles que você deseja exibir
+            });
         });
     </script>
 </body>
