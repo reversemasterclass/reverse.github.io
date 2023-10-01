@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Video Player</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
+    <style>
+        .plyr__control--overlaid, .plyr__control, .plyr__controls__item.plyr__control--overlaid:hover, .plyr__controls__item.plyr__control:hover {
+            color: black !important;
+        }
+        .plyr__control--overlaid, .plyr__control, .plyr__controls__item.plyr__control--overlaid:hover, .plyr__controls__item.plyr__control:hover {
+            border-color: black !important;
+        }
+        .plyr__control.plyr__tab-focus, .plyr__control:hover, .plyr__control.plyr__tab-focus:hover {
+            background: black !important;
+        }
+    </style>
 </head>
 <body>
     <video id="player" playsinline controls>
